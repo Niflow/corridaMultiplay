@@ -13,30 +13,11 @@ class Form {
     this.input.esconder();
   }
 
-  mostrar(){
-    this.addPosicaoElementos()
-    this.addEstiloElementos()
-    this.gerenciarClickBotao()
-    
-  }
-
-  addEstiloElementos()
+  mostrar()
   {
-    this.imagemTitulo.class('gameTitle')
-    this.entrada.class('customInput')
-    this.botaoJogar.class('customButton')
-    this.mensagem.class('greeting')
-  }
-
-  gerenciarClickBotao(){
-    this.botaoJogar.mousePressed(() => {
-      this.entrada.hide()
-      this.botaoJogar.hide()
-      var mensagem = `Olá, ${this.entrada.value()} </br>espere o outro jogador entrar...`;
-      this.mensagem.html(mensagem)
-    });
-
-  
+    this.addPosicaoElementos();
+    this.addEstiloElementos();
+    this.gerenciarClickBotao();
   }
 
   addPosicaoElementos()
@@ -47,6 +28,21 @@ class Form {
     this.mensagem.position(width / 2 - 300, height / 2 - 100);
   }
 
-  
+  addEstiloElementos()
+  {
+    this.imagemTitulo.class("gameTitle");
+    this.entrada.class("customInput");
+    this.botaoJogar.class("customButton");
+    this.mensagem.class("greeting");
+  }
+
+  gerenciarClickBotao() {
+    this.botaoJogar.mousePressed(() => {
+      this.entrada.hide(); // hide = esconder
+      this.botaoJogar.hide(); // hide = esconder
+      var mensagem = `Olah, ${this.entrada.value()} </br>espere o outro jogador entrar...`;
+      this.mensagem.html(mensagem);
+    });
+  }
 
 }

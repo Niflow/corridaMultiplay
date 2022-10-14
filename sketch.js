@@ -1,5 +1,5 @@
 // variaveis
-var bancoDeDados, jogo;
+var bancoDeDados, jogo, estadoDoJogo, numeroJogadores;
 var backgroundImg;
 
 function preload() {
@@ -10,12 +10,11 @@ function preload() {
 function setup() {
 
     canvas = createCanvas(windowWidth, windowHeight);
-
+    
     // iniciar o banco de dados
-    bancoDeDados=firebase.database()
-    jogo=new Game()
-    jogo.comecar()
-      
+    bancoDeDados = firebase.database();
+    jogo = new Game();
+    jogo.comecar();
 }
 
 function draw() {
