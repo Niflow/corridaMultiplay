@@ -2,9 +2,8 @@ class Game {
   constructor() {}
 
   comecar() {
-    var jogador = new Player(); // novo jogador
+    jogador = new Player(); // novo jogador
     numeroJogadores = jogador.pegarNumeroJogadores();
-
 
     var formulario = new Form();
     formulario.mostrar();

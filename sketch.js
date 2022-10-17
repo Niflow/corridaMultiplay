@@ -1,5 +1,6 @@
 // variaveis
-var bancoDeDados, jogo, estadoDoJogo, numeroJogadores;
+var bancoDeDados, jogo, estadoDoJogo, numeroJogadores, contadorJogadores = 0;
+var jogador;
 var backgroundImg;
 
 function preload() {
