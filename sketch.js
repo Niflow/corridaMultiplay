@@ -1,11 +1,16 @@
 // variaveis
 var bancoDeDados, jogo, estadoDoJogo, numeroJogadores, contadorJogadores = 0;
 var jogador;
-var backgroundImg;
+var backgroundImg,carro1,carro2,pista,carro1img,carro2img;
+var carros,jogadores;
 
 function preload() {
     // carregar as imagens
     backgroundImg = loadImage("./assets/planodefundo.png");
+    carro1img = loadImage("./assets/car1.png");
+    carro2img = loadImage("./assets/car2.png");
+    pista = loadImage("./assets/PISTA.png");
+
 }
 
 function setup() {
@@ -21,6 +26,13 @@ function setup() {
 function draw() {
     // desenhar na tela
     background(backgroundImg);
+    if (numeroJogadores===2) {
+        jogo.atualizarEstadoDoJogo(1)
+    }
+    if (estadoDoJogo===1) {
+        jogo.comecar()
+
+    }
 }
 
 function windowResized() {

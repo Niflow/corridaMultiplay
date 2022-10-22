@@ -38,4 +38,11 @@ class Player {
       posY: this.posY
     });
   }
+
+  static pegarDadosJogadores(){
+    var dadosJogadorRef=bancoDeDados.ref('jogadores')
+    dadosJogadorRef.on('value',dado => {
+      jogadores=dado.val()
+    })
+  }
 }
